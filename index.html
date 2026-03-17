@@ -1,21 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clair de Lune</title>
-    <link rel="website icon" type="png" href="img/logo.png" />
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="website icon" type="png" href="logo.png" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
     <link
       rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css"
+      href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/regular.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css"
+      rel="stylesheet"
     />
   </head>
   <body>
     <header>
       <div>
-        <img id="logo" src="img/logo.png" alt="logo" />
+        <h1>Clair de Lune</h1>
+        <img id="logo" src="./logo.png" alt="logo" />
         <div>
           <i class="fa-slab fa-regular fa-bars fa-2xl btn-menu"></i>
           <i class="fa-slab fa-regular fa-xmark fa-2xl btn-close"></i>
@@ -23,10 +32,23 @@
       </div>
       <nav>
         <span>
-          <a href="./index.html">Home</a>
-          <a href="">Reservations</a>
-          <a href="./menu.html">Menu</a>
-          <a href="">About Us</a>
+          <h3>Navegación</h3>
+          <div class="nav-item">
+            <i class="fa-regular fa-house"></i>
+            <a href="./index.html">Home page</a>
+          </div>
+          <div class="nav-item">
+            <i class="fa-regular fa-calendar-circle-user"></i>
+            <a href="">Reservations</a>
+          </div>
+          <div class="nav-item">
+            <i class="fa-sharp fa-regular fa-heart"></i>
+            <a href="./menu.html">Menu</a>
+          </div>
+          <div class="nav-item">
+            <i class="fa-regular fa-globe"></i>
+            <a href="">About Us</a>
+          </div>
         </span>
       </nav>
     </header>
@@ -34,86 +56,83 @@
     <main>
       <section class="principal">
         <div class="principal-text">
-          <h1>Claire de Lune</h1>
+          <div>
+            <h4>RESTAURANTE ROMÁNTICO</h4>
+            <h1>Claire de Lune</h1>
+          </div>
           <p>
-            Bienvenidos a Clair de Lune, un refugio donde la luz suave de la
-            luna guía cada detalle y la gastronomía se convierte en un gesto de
-            amor. Aquí, cada plato es una historia, cada aroma un recuerdo y
-            cada instante una celebración íntima. Nuestro menú —inspirado en la
-            delicadeza de la noche, los encuentros entre almas y la belleza de
-            lo efímero— ha sido creado para quienes buscan más que una cena: una
-            experiencia. Permítannos acompañarlos en un viaje culinario pensado
-            para dos, donde el tiempo parece detenerse y el mundo se vuelve más
-            hermoso bajo el brillo de la luna.
+            Una experiencia única bajo el claro de luna. Déjate llevar por la
+            elegancia.
           </p>
           <div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d765.450154778911!2d4.293152022986037!3d39.87870375421007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sca!2ses!4v1764256765041!5m2!1sca!2ses"
-              width="600"
-              height="450"
-              style="border: 1"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <article>
-              <input type="button" value="Reservas" />
-              <input type="button" value="Contacto" />
-            </article>
+            <div id="map"></div>
+            <input
+              class="principal-btn"
+              type="button"
+              value="Reservar mesa →"
+            />
           </div>
         </div>
       </section>
-      <section class="opiniones">
-        <h1>Opiniones</h1>
+
+      <section class="plato-estrella">
+        <h4>NUESTRA SELECCION</h4>
+        <div>
+          <h1>Platos estrella</h1>
+          <div class="gold-line"></div>
+        </div>
         <article>
-          <i class="fa-thin fa-user-tie fa-2xl"></i>
-          <div>
-            <h3>Alejandro Maldonado</h3>
-            <p>Una maravilla</p>
+          <!-- <img src="img/comida/plato 1.png" alt="" /> -->
+          <p>Esencia del Mar en Texturas</p>
+          <div class="rating">
+            <i class="fa-jelly-fill fa-regular fa-star"></i>
+            <i class="fa-jelly-fill fa-regular fa-star"></i>
+            <i class="fa-jelly-fill fa-regular fa-star"></i>
+            <i class="fa-jelly-fill fa-regular fa-star"></i>
+            <i class="fa-jelly fa-regular fa-star"></i>
           </div>
         </article>
         <article>
-          <i class="fa-thin fa-user-tie fa-2xl"></i>
-          <div>
-            <h3>Manolito Fernandez</h3>
-            <p>Increible</p>
+          <!-- <img src="img/comida/plato 2.png" alt="" /> -->
+          <p>Eclipse de Ternera con Láminas de Trufa y Crema de Luna</p>
+          <div class="rating">
+            <i class="fa-jelly-fill fa-regular fa-star"></i>
+            <i class="fa-jelly-fill fa-regular fa-star"></i>
+            <i class="fa-jelly-fill fa-regular fa-star"></i>
+            <i class="fa-jelly-fill fa-regular fa-star"></i>
+            <i class="fa-jelly fa-regular fa-star"></i>
           </div>
         </article>
       </section>
-      <section class="plato-estrella">
-        <h1>Platos Estrella</h1>
+
+      <section class="opiniones">
+        <h4>OPINIONES</h4>
+        <div>
+          <h1>Reseñas</h1>
+          <div class="gold-line"></div>
+        </div>
         <article>
-          <img src="img/comida/plato 1.png" alt="" />
-          <p>Esencia del Mar en Texturas</p>
-          <div class="rating">
-            <i class="fa-sharp fa-solid fa-heart"></i>
-            <i class="fa-sharp fa-solid fa-heart"></i>
-            <i class="fa-sharp fa-solid fa-heart"></i>
-            <i class="fa-sharp fa-solid fa-heart"></i>
-            <i class="fa-sharp fa-solid fa-heart"></i>
+          <i class="fa-thin fa-user-tie fa-2xl"></i>
+          <div>
+            <cite>"Una maravilla"</cite>
+            <h3>Alejandro Maldonado</h3>
           </div>
         </article>
         <article>
-          <img src="img/comida/plato 2.png" alt="" />
-          <p>Eclipse de Ternera con Láminas de Trufa y Crema de Luna</p>
-          <div class="rating">
-            <i class="fa-sharp fa-solid fa-heart"></i>
-            <i class="fa-sharp fa-solid fa-heart"></i>
-            <i class="fa-sharp fa-solid fa-heart"></i>
-            <i class="fa-sharp fa-solid fa-heart"></i>
-            <i class="fa-sharp fa-light fa-heart"></i>
+          <i class="fa-thin fa-user-tie fa-2xl"></i>
+          <div>
+            <cite>"Increible"</cite>
+            <h3>Manolito Fernandez</h3>
           </div>
         </article>
       </section>
     </main>
 
     <footer>
-      <section>
-        <input type="button" value="Reservas" />
-        <input type="button" value="Contacto" />
-      </section>
+      <section></section>
     </footer>
-    <script src="menu-nav.js"></script>
-    <script src="main.js"></script>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

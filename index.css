@@ -1,0 +1,90 @@
+.principal {
+  background-color: var(--rojo);
+
+  padding: 50px 30px;
+}
+
+.principal-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.principal-text > div > h4 {
+  color: var(--dorado);
+  font-family: Cormorant;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+
+.principal-text > div > h1 {
+  font-family: Tangerine;
+  font-weight: 100;
+  font-size: 5rem;
+  color: var(--dorado);
+}
+
+.principal-text > p {
+  font-family: Nunito;
+  text-align: justify;
+}
+
+#map {
+  border-radius: 10px;
+  height: 20vh;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.principal-btn {
+  font-family: Cormorant;
+  font-weight: bolder;
+  font-size: 1.5rem;
+
+  padding: 20px 30px;
+  color: var(--negro);
+  background-color: var(--dorado);
+  border: none;
+  border-radius: 10px;
+}
+
+main section {
+  border-bottom: 1px solid var(--bordes);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+main section h4{
+  color:  var(--dorado);
+  font-family: Nunito;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+
+main section h1{
+  font-family: Cormorant;
+  font-weight: 500;
+}
+
+main section .gold-line{
+  border-bottom: 1px solid var(--dorado);
+  width: 10%;
+}
+
+main section article{
+  padding: 30px;
+
+  border: 1px solid var(--bordes);
+  border-radius: 10px;
+  background-color: #1e0a0a;
+}
+
+.plato-estrella article p{
+  font-family: Nunito;
+}
+.opiniones {
+  background-color: var(--rojo-suave);
+}

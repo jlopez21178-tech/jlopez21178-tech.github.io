@@ -1,0 +1,107 @@
+:root{
+  --negro: #100c08;
+  --rojo: #93032E;
+  --dorado: #E4BD51;
+  --blanco: #FAF7F0;
+  --rojo-suave: #93032e11;
+  --bordes: #93032E55;
+}
+
+@font-face {
+  font-family: Tangerine;
+  src: url(./fonts/Tangerine-Regular.ttf);
+}
+
+@font-face {
+  font-family: cormorant;
+  src: url(./fonts/Cormorant-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(./fonts/Nunito-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--blanco);
+}
+
+header{
+  border-bottom: 1px solid var(--bordes) ;
+}
+
+header > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+
+}
+
+header > div > h1, header > div > div > i{
+  color: var(--dorado);
+}
+
+header > div > h1{
+  font-family: Tangerine;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+
+i.btn-close{
+  display: none;
+}
+
+#logo{
+  width: 20%;
+  display: none;
+}
+
+header > nav{
+  display: none;
+  border-bottom: 1px solid var(--bordes);
+}
+
+header span{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: fixed;
+  padding: 30px;
+  width: 100vw;
+}
+
+
+header span > h3{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--dorado);
+}
+
+.nav-item{
+  padding: 30px;
+}
+
+.nav-item:hover{
+  background-color: #93032E18;
+  border-radius: 20px;
+}
+
+.nav-item i{
+  color: var(--dorado);
+  padding: 5px;
+}
+
+.nav-item a{
+  text-decoration: none;
+  padding: 30px ;
+  font-size: 1.5rem;
+}
+
+body{
+  background-color: var(--negro);
+}
