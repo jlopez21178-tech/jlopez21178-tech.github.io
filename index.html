@@ -19,6 +19,10 @@
       href="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/brands.css"
+    />
   </head>
   <body>
     <header>
@@ -26,20 +30,20 @@
         <h1>Clair de Lune</h1>
         <img id="logo" src="./logo.png" alt="logo" />
         <div>
-          <i class="fa-slab fa-regular fa-bars fa-2xl btn-menu"></i>
-          <i class="fa-slab fa-regular fa-xmark fa-2xl btn-close"></i>
+          <i class="fa-slab fa-regular fa-bars fa-2xl btn btn-menu"></i>
+          <i class="fa-slab fa-regular fa-xmark fa-2xl btn btn-close"></i>
         </div>
       </div>
       <nav>
-        <span>
+        <span class="navegacio">
           <h3>Navegación</h3>
           <div class="nav-item">
             <i class="fa-regular fa-house"></i>
-            <a href="./index.html">Home page</a>
+            <a href="./index.html">Home</a>
           </div>
           <div class="nav-item">
             <i class="fa-regular fa-calendar-circle-user"></i>
-            <a href="">Reservations</a>
+            <a href="./">Reservations</a>
           </div>
           <div class="nav-item">
             <i class="fa-sharp fa-regular fa-heart"></i>
@@ -47,10 +51,14 @@
           </div>
           <div class="nav-item">
             <i class="fa-regular fa-globe"></i>
-            <a href="">About Us</a>
+            <a href="./">About Us</a>
           </div>
         </span>
       </nav>
+      <div class="registre">
+        <button>Entrar</button>
+        <button>Registrarse</button>
+      </div>
     </header>
 
     <main>
@@ -59,18 +67,43 @@
           <div>
             <h4>RESTAURANTE ROMÁNTICO</h4>
             <h1>Claire de Lune</h1>
-          </div>
-          <p>
-            Una experiencia única bajo el claro de luna. Déjate llevar por la
-            elegancia.
-          </p>
-          <div>
-            <div id="map"></div>
+            <p>
+              Una experiencia única bajo el claro de luna. Déjate llevar por la
+              elegancia.
+            </p>
             <input
               class="principal-btn"
               type="button"
               value="Reservar mesa →"
             />
+          </div>
+          <div class="extra-info">
+            <div id="map"></div>
+            <div>
+              <h5>Horario</h5>
+              <p>Lun - Dom</p>
+              <h6>20:00 - 02:00</h6>
+            </div>
+            <div>
+              <div>
+                <h5>Mesas</h5>
+                <p>18</p>
+              </div>
+              <div>
+                <h5>Menús</h5>
+                <p>4</p>
+              </div>
+              <div>
+                <h5>Estrellas</h5>
+                <div class="rating">
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -81,27 +114,39 @@
           <h1>Platos estrella</h1>
           <div class="gold-line"></div>
         </div>
-        <article>
-          <!-- <img src="img/comida/plato 1.png" alt="" /> -->
-          <p>Esencia del Mar en Texturas</p>
-          <div class="rating">
-            <i class="fa-jelly-fill fa-regular fa-star"></i>
-            <i class="fa-jelly-fill fa-regular fa-star"></i>
-            <i class="fa-jelly-fill fa-regular fa-star"></i>
-            <i class="fa-jelly-fill fa-regular fa-star"></i>
-            <i class="fa-jelly fa-regular fa-star"></i>
-          </div>
-        </article>
-        <article>
-          <!-- <img src="img/comida/plato 2.png" alt="" /> -->
-          <p>Eclipse de Ternera con Láminas de Trufa y Crema de Luna</p>
-          <div class="rating">
-            <i class="fa-jelly-fill fa-regular fa-star"></i>
-            <i class="fa-jelly-fill fa-regular fa-star"></i>
-            <i class="fa-jelly-fill fa-regular fa-star"></i>
-            <i class="fa-jelly-fill fa-regular fa-star"></i>
-            <i class="fa-jelly fa-regular fa-star"></i>
-          </div>
+        <article class="platos">
+          <section>
+            <img src="./img/food/plato1.jpg" alt="" />
+            <article class="plato-info">
+              <p>Esencia del Mar en Texturas</p>
+              <div>
+                <div class="rating">
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly fa-regular fa-star"></i>
+                </div>
+                <p>26€</p>
+              </div>
+            </article>
+          </section>
+          <section>
+            <img src="./img/food/plato1.jpg" alt="" />
+            <article class="plato-info">
+              <p>Eclipse de Ternera con Láminas de Trufa y Crema de Luna</p>
+              <div>
+                <div class="rating">
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly-fill fa-regular fa-star"></i>
+                  <i class="fa-jelly fa-regular fa-star"></i>
+                </div>
+                <p>26€</p>
+              </div>
+            </article>
+          </section>
         </article>
       </section>
 
@@ -112,27 +157,38 @@
           <div class="gold-line"></div>
         </div>
         <article>
-          <i class="fa-thin fa-user-tie fa-2xl"></i>
-          <div>
+          <section class="opinion">
+             <img src="./img/user.jpg" alt="">
             <cite>"Una maravilla"</cite>
-            <h3>Alejandro Maldonado</h3>
-          </div>
-        </article>
-        <article>
-          <i class="fa-thin fa-user-tie fa-2xl"></i>
-          <div>
-            <cite>"Increible"</cite>
-            <h3>Manolito Fernandez</h3>
-          </div>
+            <div class="user">
+              <h3>Alejandro Maldonado</h3>
+              <p>· Feb 2026</p>
+            </div>
+          </section>
+          <section class="opinion">
+             <img src="./img/user.jpg" alt="">
+              <cite>"Increible"</cite>
+              <div class="user">
+                <h3>Manolito Fernandez</h3>
+                <p>· Feb 2026</p=>
+              </div>
+          </section>
         </article>
       </section>
     </main>
 
     <footer>
-      <section></section>
+      <p>Clair de Lune</p>
+      <p>&copy; 2026 Claire de Lune</p>
+      <span>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+      </span>
     </footer>
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js"></script>
-    <script src="index.js"></script>
+    <script src="./global.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

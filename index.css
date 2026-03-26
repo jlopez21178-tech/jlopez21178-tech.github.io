@@ -31,7 +31,7 @@
 
 #map {
   border-radius: 10px;
-  height: 20vh;
+  height: 45vh;
   width: 100%;
   margin-bottom: 30px;
 }
@@ -48,7 +48,11 @@
   border-radius: 10px;
 }
 
-main section {
+.extra-info > div:last-child, .extra-info > div:nth-child(2) {
+  display: none;
+}
+
+main > section {
   border-bottom: 1px solid var(--bordes);
 
   display: flex;
@@ -57,34 +61,192 @@ main section {
   padding: 20px;
 }
 
-main section h4{
-  color:  var(--dorado);
+main section h4 {
+  color: var(--dorado);
   font-family: Nunito;
   font-weight: 100;
   letter-spacing: 5px;
 }
 
-main section h1{
+main section h1 {
   font-family: Cormorant;
   font-weight: 500;
 }
 
-main section .gold-line{
+main section .gold-line {
   border-bottom: 1px solid var(--dorado);
   width: 10%;
 }
 
-main section article{
-  padding: 30px;
+main section article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+main > section > article > section {
   border: 1px solid var(--bordes);
   border-radius: 10px;
   background-color: #1e0a0a;
 }
 
-.plato-estrella article p{
+.platos section img {
+  display: none;
+}
+
+.plato-info {
+  padding: 30px;
+  display: flex;
   font-family: Nunito;
 }
+
+.plato-info > p {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.plato-info div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plato-info div p,
+.plato-info i {
+  color: var(--dorado);
+}
+
 .opiniones {
   background-color: var(--rojo-suave);
+}
+
+.opinion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 20px;
+}
+
+.opinion img {
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+}
+
+.opinion .user {
+  font-family: Nunito;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 0.8rem;
+}
+
+.opinion h3 {
+  color: var(--dorado);
+}
+
+/* Tablet */
+@media (min-width: 577px) {
+  .principal-text {
+    flex-direction: row;
+  }
+
+  .principal-text > div {
+    flex-basis: 50%;
+  }
+
+  .principal-text > div > h1 {
+    font-size: 6.3rem;
+  }
+
+  .principal-text > div > p {
+    font-size: 1.5rem;
+    text-align: justify;
+    width: 90%;
+  }
+
+  main section article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .platos section img {
+    height: auto;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+
+    display: block;
+  }
+
+  .plato-info {
+    width: 45vw;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .principal-text .extra-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "mapa horario"
+      "mesas mesas";
+
+    gap: 5%;
+  }
+
+  .extra-info > div {
+    background-color: #7a0226;
+    border-radius: 20px;
+  }
+
+  .extra-info > div > div,
+  .extra-info > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #map {
+    grid-area: mapa;
+  }
+  #map ,.extra-info > div:nth-child(2){
+    height: 20vh;
+
+  }
+
+  .extra-info > div:nth-child(2) {
+    grid-area: horario;
+  }
+
+  .extra-info > div:last-child {
+    grid-area: mesas;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+  }
+
+  .extra-info h5,
+  .extra-info h6 {
+    font-size: 1rem;
+    color: var(--dorado);
+  }
+
+  .extra-info p,
+  .extra-info h5,
+  .extra-info h6 {
+    text-transform: uppercase;
+    font-family: Nunito;
+    font-weight: 100;
+  }
+
+  .extra-info p {
+    font-size: 1.5rem;
+  }
 }

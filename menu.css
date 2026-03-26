@@ -1,0 +1,30 @@
+main > section > div{
+  border-bottom: 1px solid var(--bordes);
+  background-color: var(--rojo-suave);
+  padding: 5px 10px;
+}
+
+.categories .category-focus{
+  border-bottom: 1px solid var(--dorado) ;
+  color: var(--dorado);
+  opacity: 1;
+}
+
+.categories button{
+  border: none;
+}
+.categories button, .filters button{
+  background-color: transparent;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.filters button{
+  border-radius: 20px;
+  border: 1px solid var(--bordes);
+}
+
+.filters .filter-focus{
+  background-color: var(--rojo);
+  opacity: 1;
+}
