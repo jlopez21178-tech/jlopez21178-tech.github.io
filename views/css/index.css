@@ -73,11 +73,6 @@ main section h1 {
   font-weight: 500;
 }
 
-main section .gold-line {
-  border-bottom: 1px solid var(--dorado);
-  width: 10%;
-}
-
 main section article {
   display: flex;
   flex-direction: column;

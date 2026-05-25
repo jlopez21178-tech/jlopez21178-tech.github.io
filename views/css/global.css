@@ -9,17 +9,17 @@
 
 @font-face {
   font-family: Tangerine;
-  src: url(./fonts/Tangerine-Regular.ttf);
+  src: url(../../fonts/Tangerine-Regular.ttf);
 }
 
 @font-face {
   font-family: cormorant;
-  src: url(./fonts/Cormorant-VariableFont_wght.ttf);
+  src: url(../../fonts/Cormorant-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: Nunito;
-  src: url(./fonts/Nunito-VariableFont_wght.ttf);
+  src: url(../../fonts/Nunito-VariableFont_wght.ttf);
 }
 
 * {
@@ -32,6 +32,8 @@
 header {
   border-bottom: 1px solid var(--bordes);
   padding: 2%;
+  height: 100%;
+  width: 100%;
 }
 
 header > div {
@@ -90,8 +92,7 @@ i.btn-close {
   padding: 5px;
 }
 
-.nav-item a {
-  text-decoration: none;
+.nav-item p {
   padding: 30px;
   font-size: 1.5rem;
 }
@@ -103,6 +104,11 @@ i.btn-close {
 body {
   background-color: var(--negro);
   margin-bottom: 7%;
+}
+
+main section .gold-line {
+  border-bottom: 1px solid var(--dorado);
+  width: 10%;
 }
 
 footer {
@@ -164,11 +170,12 @@ footer span i {
     padding: 0;
   }
 
-  .nav-item a:hover{
+  .nav-item p:hover{
     color: var(--dorado);
+    cursor: pointer;
   }
 
-  .nav-item a {
+  .nav-item p {
     padding: 1vw;
   }
   

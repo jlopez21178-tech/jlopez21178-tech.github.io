@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clair de Lune</title>
+    <link rel="website icon" type="png" href="../../img/logo.png" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/reservas.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/brands.css"
+    />
+
+    <!-- Flatpickr para el calendario. Links necesarios -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <section class="title">
+        <h4>Reserva tu mesa</h4>
+        <h1>Reservas</h1>
+        <h4>Completa el formulario y confirma tu noche</h4>
+      </section>
+
+      <section class="reservation-info">
+        <article class="step-1">
+          <h4>Paso 1 - Datos personales</h4>
+          <h3>Tus datos</h3>
+          <div class="gold-line"></div>
+
+          <form action="#">
+            <label>
+              Nom
+              <input
+                type="text"
+                name="inNom"
+                id="inNom"
+                placeholder="Nombre Apellido"
+              />
+            </label>
+            <label>
+              Telefono
+              <input
+                type="text"
+                name="inPhone"
+                id="inPhone"
+                placeholder="123456789"
+              />
+            </label>
+            <label>
+              Email
+              <input
+                type="email"
+                name="inEmail"
+                id="inEmail"
+                placeholder="xxxx@gmail.com"
+              />
+            </label>
+            <label>
+              Numero de comensales
+              <input type="number" name="numComensales" id="numComensales" />
+            </label>
+          </form>
+        </article>
+        <article class="step-2">
+          <h4>Paso 2 - Fecha | Hora</h4>
+          <h3>¿Cuando?</h3>
+          <div class="gold-line"></div>
+          <form action="/procesar-reserva" method="POST">
+            <label
+              >Selecciona tu fecha de reserva:
+              <input
+                type="text"
+                id="datepicker"
+                name="fecha"
+                placeholder="Selecciona una fecha"
+              />
+            </label>
+
+            <label
+              >Selecciona la hora
+              <input type="time" id="hora" name="hora" required />
+            </label>
+          </form>
+        </article>
+        <article class="step-3">
+          <h4>Paso 3 - Otras opciones</h4>
+          <h3>Preferencias</h3>
+          <div class="gold-line"></div>
+          <div>
+            <div id="interior" class="item">
+              <div>
+                <h4>Interior</h4>
+                <p>Ambiente intimo y climatizado</p>
+              </div>
+              <div class="marca"></div>
+            </div>
+            <div id="exterior" class="item">
+              <div>
+                <h4>Exterior</h4>
+                <p>Terraza bajo las estrellas</p>
+              </div>
+              <div class="marca"></div>
+            </div>
+            <div id="decoracion-romantica" class="item">
+              <div>
+                <h4>Decoración romantica</h4>
+                <p>Rosas y velas · +35€</p>
+              </div>
+              <div class="marca"></div>
+            </div>
+            <div id="zona-privada" class="item">
+              <div>
+                <h4>Zona privada</h4>
+                <p>Reserva exclusiva · +80€</p>
+              </div>
+              <div class="marca"></div>
+            </div>
+          </div>
+        </article>
+        <div class="buttons">
+          <button class="back-btn">Atras</button>
+          <button class="next-btn">Siguiente</button>
+        </div>
+      </section>
+
+      <div class="finished-reservation">
+        <h2>Reserva realizada</h2>
+        <h4>Pronto recibira un email de confirmacion</h4>
+        <div>
+          <h3>Datos de la reserva:</h3>
+          <div class="red">
+            <h3>Fecha:</h3>
+            <p class="fecha"></p>
+          </div>
+          <div>
+            <h3>Hora:</h3>
+            <p class="hora"></p>
+          </div>
+          <div class="red">
+            <h3>Nombre:</h3>
+            <p class="nombre"></p>
+          </div>
+          <div>
+            <h3>Email:</h3>
+            <p class="email"></p>
+          </div>
+          <div class="red">
+            <h3>Telefono</h3>
+            <p class="telefono"></p>
+          </div>
+          <div>
+            <h3>Numero de comensales:</h3>
+            <p class="comensales"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/reservations.js"></script>
+  </body>
+</html>

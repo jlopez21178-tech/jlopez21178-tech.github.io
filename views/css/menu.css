@@ -1,0 +1,101 @@
+main > section > div {
+  border-bottom: 1px solid var(--bordes);
+  background-color: var(--rojo-suave);
+  padding: 5px 10px;
+}
+
+.categories .category-focus {
+  border-bottom: 1px solid var(--dorado);
+  color: var(--dorado);
+  opacity: 1;
+}
+
+.categories button {
+  border: none;
+}
+.categories button,
+.filters button {
+  background-color: transparent;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.filters button {
+  border-radius: 20px;
+  border: 1px solid var(--bordes);
+}
+
+.filters .filter-focus {
+  background-color: var(--rojo);
+  opacity: 1;
+}
+
+.menu {
+  padding: 20px;
+}
+
+.menu > article {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu > article > div {
+  width: 100%;
+  height: auto;
+  min-height: 12vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid var(--bordes);
+
+}
+
+.menu > article > div:hover {
+  background-color: var(--rojo-suave);
+  border-radius: 10px;
+}
+
+.plato {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+  justify-content: space-around;
+}
+
+.plato > p {
+  font-family: Nunito;
+  font-size: 1.3rem;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tags p {
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px;
+}
+
+.tags #sin-gluten {
+  color: #ef9f27;
+  background-color: #ba751720;
+}
+
+.tags #vegano {
+  color: #5dcaa5;
+  background-color: #0f6e5620;
+}
+
+.stars {
+  color: var(--dorado);
+}
+
+.menu > article > section > h1 {
+  font-family: Cormorant;
+  font-weight: 100;
+}
